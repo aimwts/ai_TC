@@ -1,5 +1,5 @@
 # TAAS EdgeOS (TestCenterOS) Demo2 - Demo running in Lab on 8/11/20
-# updated 12/42020 
+# updated 12/4/2020 
 ## TCOS - Test Center Operating System Overview
 
 This is an advanced application demo for running a Test Center that demonstrates many of the key capabilities enabled by TAAS EdgeOS, such as: 
