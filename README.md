@@ -1,5 +1,6 @@
+![Demo Application Map](https://raw.githubusercontent.com/aimwts/aiTAAS-Edge/master/Taas_logo_s.jpg "Demo Application Map")
+
 # TAAS EdgeOS (TestCenterOS) Demo2 - Demo running in Lab on 8/11/20
-# updated 12/4/2020 
 ## TCOS - Test Center Operating System Overview
 
 This is an advanced application demo for running a Test Center that demonstrates many of the key capabilities enabled by TAAS EdgeOS, such as: 
@@ -8,6 +9,10 @@ This is an advanced application demo for running a Test Center that demonstrates
  * The ability to aggregate data on a fabric at many levels
  * The ability to visualize data through a real-time UI
  * The ability to monitor sensros from each tester and predict tester function failure 
+ 
+ ## DEMO for an TAAS Test Center running with many testers and AI/ML Cloud
+ 
+ ![Demo Application Map](https://raw.githubusercontent.com/aimwts/aiTAAS-Edge/master/AI%20ML%20Cloud.png "Demo Application Map")
 
 This application is deployed in the TestCenter office for monitoring testers and serves as a demonstration of best practices. Therefore, the description of this application will be through a hypothetical TestCenter scenario even though the application could be applied to many use cases involving sensors, DUT testing real-time Data collection and/or a network of devices. 
 
@@ -23,9 +28,6 @@ Benefits: This Solution has the benefits:
   * Easier:  Simple configuration - Effortless onboarding; Scale to massive data volume
 
 Inside the TestCenter, there are a number of Raspberry Pi devices with various roles. These roles are: Tester Monitor, Automated Robot, and Data Aggregator. It’s important to note that all Raspberry Pi devices run the same software with minor configuration changes that define how they act and participate within the greenhouse network. This diagram provides a simple overview of the complete application and configurations.
-
-![Demo Application Map](https://raw.githubusercontent.com/aimwts/aiTAAS-Edge/master/Taas_logo_s.jpg "Demo Application Map")
-
 
 ![Demo Application Map](https://raw.githubusercontent.com/aimwts/aiTAAS-Edge/master/Edge%20map.jpg "Demo Application Map")
 
@@ -173,7 +175,7 @@ The exact same bundle is deployed to every device. Consequently, every device co
 1. **`SensorService`** - A physical sensor's digital twin. It exposes both the **latest** value and a **history** of values measured by its corresponding sensor. A configurable **threshold** can be defined within each `SensorService`, and deviating from it will raise an **alert**.
 2. **`DeviceService`** - A device's digital twin. It exposes the **latest** value from all sensors attached to the device and contains the logic to **communicate** with any bots assigned to diagnose issues with these sensors.
 3. **`BotService`** - A bot's digital twin. It directly **observes** `SensorServices` for alerts, then resolves them via **communication** with the reporting `SensorServices'` `DeviceServices`.
-4. **`AggregateService`** - The greenhouse's digital twin. Data-wise, it provides **summary statistics** across all fields being observed by all devices. Operation-wise, it reports the **status** of all bots and **health** of all devices in its TestCenter.
+4. **`AggregateService`** - The TestCenter's digital twin. Data-wise, it provides **summary statistics** across all fields being observed by all devices. Operation-wise, it reports the **status** of all bots and **health** of all devices in its TestCenter.
 
 ## NodeJS Application Structure
 
